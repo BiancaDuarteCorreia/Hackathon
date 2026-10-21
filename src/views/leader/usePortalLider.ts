@@ -1,5 +1,5 @@
 import { useState, useCallback, useMemo } from 'react';
-import { sql, neonClient } from '../../lib/neon';
+import { sql } from '../../lib/neon';
 
 export interface TrainingData {
     id: string;

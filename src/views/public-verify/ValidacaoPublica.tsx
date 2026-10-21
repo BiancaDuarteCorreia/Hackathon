@@ -1,7 +1,6 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import {
   Input,
-  Typography,
   Tag,
   message,
   Avatar,
@@ -17,7 +16,6 @@ import {
 } from '@ant-design/icons';
 import { useValidacaoPublica } from './useValidacaoPublica'; // Ajuste o caminho se estiver em ./hooks/useValidacaoPublica
 
-const { Text } = Typography;
 const { useBreakpoint } = Grid;
 
 // Mesma paleta do Portal do Líder (slate / indigo / emerald / rose)

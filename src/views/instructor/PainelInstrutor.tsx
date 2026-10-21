@@ -409,7 +409,6 @@ export const PainelInstrutor: React.FC = () => {
     attendees,
     filteredAttendees,
     stats,
-    activeTrainingTitle,
     statusOptions,
     search,
     setSearch,
@@ -432,11 +431,6 @@ export const PainelInstrutor: React.FC = () => {
   const totalPages = Math.max(1, Math.ceil(filteredAttendees.length / PAGE_SIZE));
   const currentPage = Math.min(page, totalPages);
   const pagedAttendees = filteredAttendees.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
-
-  const openCameraModal = () => {
-    setSimulatedMatchUser(null);
-    setIsCameraModalOpen(true);
-  };
 
   const closeCameraModal = () => {
     setIsCameraModalOpen(false);

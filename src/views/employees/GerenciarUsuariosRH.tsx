@@ -37,7 +37,7 @@ import {
   UploadOutlined,
 } from '@ant-design/icons';
 import type { ColumnsType } from 'antd/es/table';
-import { useGerenciarUsuarios, generateTempPassword, MAX_PHOTO_SIZE } from './useGerenciarUsuarios';
+import { useGerenciarUsuarios, MAX_PHOTO_SIZE } from './useGerenciarUsuarios';
 import type { SystemUser } from './useGerenciarUsuarios';
 
 const { Text } = Typography;
