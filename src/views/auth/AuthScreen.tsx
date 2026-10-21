@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Form, Input, Button, Typography, ConfigProvider, Grid } from 'antd';
+import { Form, Input, Button, ConfigProvider, Grid } from 'antd';
 import { UserOutlined, LockOutlined, MailOutlined, ArrowRightOutlined } from '@ant-design/icons';
-
-import { useAlert } from '../../utils/useAlert'; // Ajuste o caminho se necessário
 import logo from '../../assets/iconLinsAgro.webp';
 import bgImage from '../../assets/background.png';
 import { useAuthAPI, useRegisterAPI } from './useAuthScreen';
 
-const { Text } = Typography;
 const { useBreakpoint } = Grid;
 
 // Paleta (azul corporativo Lins + verde-água da logo + neutros slate)
@@ -87,12 +84,8 @@ export default function AuthScreen() {
     };
 
     const handleRegisterSubmit = (values: any) => {
-        const { name, email, password, confirmPassword } = values;
+        const { name, email, password } = values;
         register(name.trim(), email.trim(), password.trim());
-    };
-
-    const switchView = (toLogin: boolean) => {
-        setIsLoginView(toLogin);
     };
 
     return (
