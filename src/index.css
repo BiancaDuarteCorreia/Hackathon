@@ -1,0 +1,329 @@
+/* Reset e Configurações Globais - Estilo Minimalista e Clean */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Noto Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f8fafc;
+  color: #334155;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Layout Geral Minimalista */
+.app-layout {
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+/* Header Compacto e Limpo */
+.app-header {
+  background: #ffffff;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 54px;
+}
+
+.app-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-brand-logo {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+}
+
+.app-brand-divider {
+  height: 18px;
+  width: 1px;
+  background-color: #cbd5e1;
+}
+
+.app-brand-text {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.app-brand-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0032a0;
+  letter-spacing: -0.2px;
+}
+
+.app-brand-subtitle {
+  font-size: 11px;
+  color: #00b5ad;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Navegação Lateral Compacta */
+.app-sider {
+  background: #ffffff !important;
+  border-right: 1px solid #e2e8f0;
+}
+
+.app-sider .ant-layout-sider-trigger,
+.ant-layout-sider-zero-width-trigger {
+  display: none !important;
+}
+
+.app-sider .ant-menu-item {
+  font-size: 12.5px;
+  border-radius: 4px;
+  margin: 2px 6px;
+  height: 36px;
+  line-height: 36px;
+  color: #475569;
+  transition: all 0.15s ease;
+}
+
+.app-sider .ant-menu-item-selected {
+  background-color: #ebf2ff !important;
+  color: #0032a0 !important;
+  font-weight: 600;
+}
+
+/* Área de Conteúdo */
+.app-content {
+  padding: 20px 24px;
+  background-color: #f8fafc;
+  min-height: calc(100vh - 54px - 44px);
+}
+
+.app-footer {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 12px;
+  padding: 12px 24px;
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* ==========================================================================
+   Apple iOS Liquid Glass & Specular Shadow System
+   ========================================================================== */
+
+/* Balões de Indicadores (KPIs) com Liquid Glass iOS */
+.ios-liquid-balloon {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.65) 100%) !important;
+  backdrop-filter: blur(24px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(200%) !important;
+  border-radius: 14px !important;
+  border: 1px solid rgba(255, 255, 255, 0.88) !important;
+  box-shadow: 
+    0 12px 28px -4px rgba(0, 50, 160, 0.08),
+    0 6px 12px -2px rgba(15, 23, 42, 0.04),
+    0 1px 2px 0 rgba(15, 23, 42, 0.02),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 1px 0 rgba(0, 50, 160, 0.03) !important;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.ios-liquid-balloon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 1) 65%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+}
+
+.ios-liquid-balloon:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 
+    0 20px 36px -4px rgba(0, 50, 160, 0.14),
+    0 10px 16px -3px rgba(15, 23, 42, 0.06),
+    inset 0 2px 2px 0 rgba(255, 255, 255, 1) !important;
+  border-color: rgba(255, 255, 255, 1) !important;
+}
+
+/* Cards Gerais com Liquid Glass Suave */
+.lins-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.72) 100%) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 
+    0 10px 25px -4px rgba(0, 50, 160, 0.06),
+    0 4px 8px -2px rgba(15, 23, 42, 0.03),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.9) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  position: relative;
+}
+
+.lins-card:hover {
+  border-color: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 
+    0 16px 32px -4px rgba(0, 50, 160, 0.1),
+    0 6px 12px -2px rgba(15, 23, 42, 0.05),
+    inset 0 1px 2px 0 rgba(255, 255, 255, 1) !important;
+}
+
+/* Toggle Estilo iOS Liquid Glass */
+.ios-segmented-toggle {
+  background: rgba(241, 245, 249, 0.8) !important;
+  backdrop-filter: blur(14px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  border-radius: 20px !important;
+  padding: 3px !important;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(255, 255, 255, 0.9) !important;
+}
+
+.ios-segmented-toggle .ant-segmented-item {
+  border-radius: 16px !important;
+  font-size: 11.5px !important;
+  font-weight: 600 !important;
+  color: #64748b !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.ios-segmented-toggle .ant-segmented-item:hover {
+  color: #0032a0 !important;
+}
+
+.ios-segmented-toggle .ant-segmented-item-selected {
+  background: #ffffff !important;
+  color: #0032a0 !important;
+  box-shadow: 
+    0 3px 8px rgba(0, 50, 160, 0.16),
+    0 1px 2px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 1) !important;
+}
+
+/* Switch Estilo iOS Liquid */
+.ant-switch {
+  background-color: #cbd5e1 !important;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12) !important;
+}
+
+.ant-switch.ant-switch-checked {
+  background-color: #0032A0 !important;
+  box-shadow: 0 2px 6px rgba(0, 50, 160, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.35) !important;
+}
+
+.lins-page-header {
+  margin-bottom: 18px;
+}
+
+.lins-page-title {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+  letter-spacing: -0.2px;
+}
+
+/* Tabela e Utilitários Responsivos */
+.table-responsive-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ant-table-wrapper .ant-table {
+  font-size: 12.5px;
+}
+
+/* Botão de Menu Mobile */
+.mobile-menu-btn {
+  display: none !important;
+}
+
+/* Responsividade: Tablets e Telas Médias (< 992px) */
+@media (max-width: 991px) {
+  .mobile-menu-btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .app-header {
+    padding: 0 16px;
+    height: 52px;
+  }
+
+  .app-content {
+    padding: 16px 18px;
+  }
+}
+
+/* Responsividade: Smartphones (< 576px) */
+@media (max-width: 576px) {
+  .app-header {
+    padding: 0 10px;
+    height: 48px;
+  }
+
+  .app-brand {
+    gap: 8px;
+  }
+
+  .app-brand-logo {
+    height: 22px;
+  }
+
+  .app-brand-divider {
+    display: none;
+  }
+
+  .app-brand-subtitle {
+    display: none;
+  }
+
+  .app-brand-title {
+    font-size: 13px;
+  }
+
+  .header-meta-tags {
+    display: none !important;
+  }
+
+  .app-content {
+    padding: 12px 10px;
+  }
+
+  .lins-page-header {
+    margin-bottom: 12px;
+  }
+
+  .cert-diploma-box {
+    padding: 14px 8px !important;
+  }
+
+  .cert-diploma-box h4 {
+    font-size: 14px !important;
+  }
+
+  .cert-diploma-box h3 {
+    font-size: 16px !important;
+  }
+}
